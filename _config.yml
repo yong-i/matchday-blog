@@ -1,0 +1,8 @@
+title: "직관 가는 날 개발 기록"
+description: "소프트웨어공학 개인 프로젝트를 기획하고 개발하는 과정을 기록합니다."
+author: "김태용"
+url: "https://yong-i.github.io"
+baseurl: "/matchday-blog"
+theme: minima
+lang: ko
+timezone: Asia/Seoul
