@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="604" viewBox="0 0 740 604" role="img" aria-labelledby="title desc">
+<title id="title">직관 가는 날 ERD 초안</title>
+<desc id="desc">경기장은 여러 관람 계획에서 참조한다. 관람 계획은 여러 일정 항목을 가지며, 각 일정 항목은 한 방문 장소를 참조한다.</desc>
+<defs>
+  <style>
+    text { font-family: 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif; }
+    .mono { font-family: ui-monospace, 'SF Mono', Consolas, monospace; }
+  </style>
+</defs>
+<rect width="740" height="604" rx="16" fill="#F2F6F6"/>
+<text x="20" y="32" font-size="22" font-weight="700" fill="#143741">직관 가는 날 · ERD 초안</text>
+<text x="720" y="31" font-size="13" text-anchor="end" fill="#345760">PK 기본키 · FK 외래키</text>
+<g fill="none" stroke="#597880" stroke-width="2">
+  <path d="M 322,128 H 418"/>
+  <path d="M 171,299 V 362"/>
+  <path d="M 322,449 H 418"/>
+</g>
+<g font-size="14" font-weight="700" fill="#17434B">
+  <text x="331" y="120">0..N</text><text x="404" y="120">1</text>
+  <text x="181" y="316">1</text><text x="181" y="354">0..N</text>
+  <text x="331" y="441">0..N</text><text x="404" y="441">1</text>
+</g>
+<text x="252" y="335" text-anchor="end" font-size="13" fill="#345760">일정 포함</text>
+<text x="370" y="148" text-anchor="middle" font-size="13" fill="#345760">경기장 선택</text>
+<text x="370" y="469" text-anchor="middle" font-size="13" fill="#345760">장소 참조</text>
+
+<rect x="20" y="50" width="302" height="249" rx="10" fill="#FFFFFF" stroke="#B7CBCF"/>
+<path d="M30,50 H312 Q322,50 322,60 V90 H20 V60 Q20,50 30,50 Z" fill="#143741"/>
+<text class="mono" x="35" y="76" font-size="18" font-weight="700" fill="#FFFFFF">plans</text>
+<text x="308" y="76" text-anchor="end" font-size="15" fill="#D8EFF0">관람 계획</text>
+<rect x="28" y="95" width="286" height="22" rx="3" fill="#F0F5F5"/>
+<text x="35" y="111" font-size="13" font-weight="700" fill="#9A410F">PK</text>
+<text class="mono" x="70" y="111" font-size="15" fill="#123743">id</text>
+<text x="35" y="135" font-size="13" font-weight="700" fill="#9A410F">FK</text>
+<text class="mono" x="70" y="135" font-size="15" fill="#123743">stadium_id</text>
+<rect x="28" y="143" width="286" height="22" rx="3" fill="#F0F5F5"/>
+<text class="mono" x="70" y="159" font-size="15" fill="#123743">start_label</text>
+<text class="mono" x="70" y="183" font-size="15" fill="#123743">start_at</text>
+<rect x="28" y="191" width="286" height="22" rx="3" fill="#F0F5F5"/>
+<text class="mono" x="70" y="207" font-size="15" fill="#123743">game_at</text>
+<text class="mono" x="70" y="231" font-size="15" fill="#123743">entry_buffer_min</text>
+<rect x="28" y="239" width="286" height="22" rx="3" fill="#F0F5F5"/>
+<text class="mono" x="70" y="255" font-size="15" fill="#123743">food_budget_won</text>
+<text class="mono" x="70" y="279" font-size="15" fill="#123743">manual_last_leg_min</text>
+<rect x="418" y="50" width="302" height="153" rx="10" fill="#FFFFFF" stroke="#B7CBCF"/>
+<path d="M428,50 H710 Q720,50 720,60 V90 H418 V60 Q418,50 428,50 Z" fill="#143741"/>
+<text class="mono" x="433" y="76" font-size="18" font-weight="700" fill="#FFFFFF">stadiums</text>
+<text x="706" y="76" text-anchor="end" font-size="15" fill="#D8EFF0">경기장</text>
+<rect x="426" y="95" width="286" height="22" rx="3" fill="#F0F5F5"/>
+<text x="433" y="111" font-size="13" font-weight="700" fill="#9A410F">PK</text>
+<text class="mono" x="468" y="111" font-size="15" fill="#123743">id</text>
+<text class="mono" x="468" y="135" font-size="15" fill="#123743">name</text>
+<rect x="426" y="143" width="286" height="22" rx="3" fill="#F0F5F5"/>
+<text class="mono" x="468" y="159" font-size="15" fill="#123743">latitude</text>
+<text class="mono" x="468" y="183" font-size="15" fill="#123743">longitude</text>
+<rect x="20" y="362" width="302" height="225" rx="10" fill="#FFFFFF" stroke="#B7CBCF"/>
+<path d="M30,362 H312 Q322,362 322,372 V402 H20 V372 Q20,362 30,362 Z" fill="#143741"/>
+<text class="mono" x="35" y="388" font-size="18" font-weight="700" fill="#FFFFFF">plan_items</text>
+<text x="308" y="388" text-anchor="end" font-size="15" fill="#D8EFF0">일정 항목</text>
+<rect x="28" y="407" width="286" height="22" rx="3" fill="#F0F5F5"/>
+<text x="35" y="423" font-size="13" font-weight="700" fill="#9A410F">PK</text>
+<text class="mono" x="70" y="423" font-size="15" fill="#123743">id</text>
+<text x="35" y="447" font-size="13" font-weight="700" fill="#9A410F">FK</text>
+<text class="mono" x="70" y="447" font-size="15" fill="#123743">plan_id</text>
+<rect x="28" y="455" width="286" height="22" rx="3" fill="#F0F5F5"/>
+<text x="35" y="471" font-size="13" font-weight="700" fill="#9A410F">FK</text>
+<text class="mono" x="70" y="471" font-size="15" fill="#123743">place_id</text>
+<text class="mono" x="70" y="495" font-size="15" fill="#123743">position</text>
+<rect x="28" y="503" width="286" height="22" rx="3" fill="#F0F5F5"/>
+<text class="mono" x="70" y="519" font-size="15" fill="#123743">travel_min</text>
+<text class="mono" x="70" y="543" font-size="15" fill="#123743">stay_min</text>
+<rect x="28" y="551" width="286" height="22" rx="3" fill="#F0F5F5"/>
+<text class="mono" x="70" y="567" font-size="15" fill="#123743">food_cost_won</text>
+<rect x="418" y="362" width="302" height="201" rx="10" fill="#FFFFFF" stroke="#B7CBCF"/>
+<path d="M428,362 H710 Q720,362 720,372 V402 H418 V372 Q418,362 428,362 Z" fill="#143741"/>
+<text class="mono" x="433" y="388" font-size="18" font-weight="700" fill="#FFFFFF">places</text>
+<text x="706" y="388" text-anchor="end" font-size="15" fill="#D8EFF0">방문 장소</text>
+<rect x="426" y="407" width="286" height="22" rx="3" fill="#F0F5F5"/>
+<text x="433" y="423" font-size="13" font-weight="700" fill="#9A410F">PK</text>
+<text class="mono" x="468" y="423" font-size="15" fill="#123743">id</text>
+<text class="mono" x="468" y="447" font-size="15" fill="#123743">name</text>
+<rect x="426" y="455" width="286" height="22" rx="3" fill="#F0F5F5"/>
+<text class="mono" x="468" y="471" font-size="15" fill="#123743">category</text>
+<text class="mono" x="468" y="495" font-size="15" fill="#123743">latitude</text>
+<rect x="426" y="503" width="286" height="22" rx="3" fill="#F0F5F5"/>
+<text class="mono" x="468" y="519" font-size="15" fill="#123743">longitude</text>
+<text class="mono" x="468" y="543" font-size="15" fill="#123743">default_food_cost_won</text>
+</svg>
